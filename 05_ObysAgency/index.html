@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <title>Obys Agency</title>
+
+    <!-- locomotive css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <!-- Shery css -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- tailwindcss js -->
+    <link rel="stylesheet" href="tailwindMain.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body class="text-white"> 
+
+    <div class="viewOnSmallScreen">
+      <h1>😝</h1>
+      <h1>Not for mobile</h1>
+      <h1>or</h1>
+      <h1>small tablet view</h1>
+      <h1>I didn't make it responsive, 😝</h1>
+    </div>
+
+    <!-- cursor begin -->
+    <svg
+      id="cursor"
+      class="fixed z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference pointer-events-none"
+      width="50"
+      height="50"
+    >
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        stroke="#ffffffd4"
+        stroke-width="1"
+        fill="transparent"
+        class="items"
+      />
+    </svg>
+    <!-- cursor end -->
+
+    <main class="bg-[#151515] relative overflow-hidden" data-scroll-container id="main">
+
+      <!-- loader begin -->
+      <div
+        id="loader"
+        class="h-screen w-full bg-[#0a0a0a] fixed z-[9999] font-[plainLight] pt-30 pl-20 cursor-none"
+      >
+        <div
+          class="line flex justify-start items-center gap-20 pl-24 overflow-hidden"
+        >
+          <div class="counter flex justify-center items-start gap-4 h-24">
+            <h4
+              class="text-6xl font-[silkLightItalic] w-25 text-right"
+              id="loading"
+            >
+              0
+            </h4>
+            <h4 class="text-6xl font-[silkLightItalic]">-</h4>
+            <h4 class="text-6xl font-[silkLightItalic]">100</h4>
+          </div>
+          <h1 class="text-9xl uppercase font-[500]">Your</h1>
+        </div>
+        <div class="line overflow-hidden">
+          <h1 class="text-9xl uppercase font-[500]">Web experience</h1>
+        </div>
+        <div class="line h-36 flex items-start overflow-hidden">
+          <h1 class="text-9xl uppercase font-[500]">
+            is loading right <span id="blink">now</span>
+          </h1>
+        </div>
+        <p class="w-fit pl-98 pt-12 font-[plainLight]">
+          Please wait <br />a few seconds
+        </p>
+      </div>
+      <!-- loader end -->
+
+      <!-- main content start here -->
+
+       <!-- menu begin -->
+        <nav class="pl-20 pt-[3.2rem] fixed z-100">
+          <!-- nav left begin -->
+          <div class="navLeft flex items-center gap-10">
+            <!-- menu icon begin -->
+            <div class="menu relative">
+              <svg
+                class="menu-opener__square"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <rect y="10" width="2" height="2" fill="currentColor"></rect>
+                <rect y="5" width="2" height="2" fill="currentColor"></rect>
+                <rect width="2" height="2" fill="currentColor"></rect>
+                <rect
+                  x="5"
+                  y="10"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                ></rect>
+                <rect
+                  x="5"
+                  y="5"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                ></rect>
+                <rect x="5" width="2" height="2" fill="currentColor"></rect>
+                <rect
+                  x="10"
+                  y="10"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                ></rect>
+                <rect
+                  x="10"
+                  y="5"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                ></rect>
+                <rect x="10" width="2" height="2" fill="currentColor"></rect>
+              </svg>
+            </div>
+            <!-- menu icon end -->
+
+            <!-- logo begin -->
+            <div class="logo">
+              <a href="">
+                <svg
+                  class="brand__svg"
+                  width="71"
+                  height="27"
+                  viewBox="0 0 71 27"
+                >
+                  <path
+                    d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <!-- logo end -->
+          </div>
+          <!-- nav left end -->
+        </nav>
+      <!-- menu end -->
+
+      <!-- Header Page begin -->
+      <section data-scroll-section id="headerPage" class="h-screen w-full">
+        <!-- header begin -->
+        <header data-scroll class="pl-20 pr-20 pt-13" id="header">
+          <nav class="flex items-start gap-68">
+            <!-- nav right begin -->
+            <div data-scroll class="navRight w-full flex justify-between">
+              <!-- agencyName begin -->
+              <div class="agencyName flex justify-end w-[29%]">
+                <h3
+                  class="capitalize leading-none tracking-tight font-[plainLight] w-fit text-base"
+                >
+                  Obys—<br />creative<br />Design<br />Agency
+                </h3>
+              </div>
+              <!-- agencyName end -->
+
+              <!-- links container begin -->
+              <ul class="linksContainer flex gap-9">
+                <li class="linkBox">
+                  <a href="" class="link capitalize text-base font-[plainLight]"
+                    >works</a
+                  >
+                </li>
+                <li class="linkBox">
+                  <a href="" class="link capitalize text-base font-[plainLight]"
+                    >about</a
+                  >
+                </li>
+                <li class="linkBox">
+                  <a href="" class="link capitalize text-base font-[plainLight]"
+                    >contacts</a
+                  >
+                </li>
+              </ul>
+              <!-- links container end -->
+            </div>
+            <!-- nav right end -->
+          </nav>
+        </header>
+        <!-- header end -->
+
+        <!-- main heading begin -->
+        <div
+          data-scroll data-scroll-speed="1.5" class="mainHeading flex items-start gap-23 pl-20 pr-20 pt-32 h-[80%]"
+        >
+          <div
+            class="serialNoBox flex flex-col justify-between w-3/12 h-full pb-10"
+          >
+            <h3
+              class="serialNumber font-[silkRegularItalic] text-[3.5rem] w-fit self-end"
+            >
+              01
+            </h3>
+            <div id="scrollHint" class="text-[#5e5d5d] overflow-hidden h-fit">
+              <p class="font-[plainLight]">Scroll</p>
+            </div>
+          </div>
+
+          <div class="heading w-full h-fit relative z-10">
+            <div class="line overflow-hidden pt-3">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.1rem] leading-25 h-32"
+              >
+                we design
+              </h1>
+            </div>
+            <div class="line overflow-hidden">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.1rem] leading-25 h-32"
+              >
+                unique
+              </h1>
+            </div>
+            <div class="line overflow-hidden w-fit" id="webGrahpic">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.1rem] leading-25 h-32"
+              >
+                <span class="span1 relative">web</span
+                >&ThinSpace;&ThinSpace;<span class="span2 relative"
+                  >&ThinSpace;graphic</span
+                >
+              </h1>
+            </div>
+            <div class="line overflow-hidden">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.08rem] leading-25 h-32"
+              >
+                experience
+              </h1>
+            </div>
+            <img src="./images/Flag.jpg" class="flagImage absolute opacity-0 top-[10%] left-[40%] -z-1 -translate-x-1/2 h-135 w-95" alt="flag" id="flag">
+          </div>
+        </div>
+        <!-- main heading end -->
+      </section>
+      <!-- Header Page end -->
+
+      <!-- video page begin -->
+      <section data-scroll-section id="videoPage" class="h-[90vh] w-full">
+        <!-- video container begin -->
+        <div
+        data-scroll data-scroll-speed="2" class="videoContainer h-full w-full pl-20 pt-20 flex items-start gap-21"
+        >
+          <!-- left part begin-->
+          <div class="w-3/12"></div>
+          <!-- left part end -->
+
+          <!-- video right part begin -->
+          <div class="videoBox w-full h-full relative">
+            <!-- button begin -->
+            <button
+              id="videoButton"
+              class="h-40 w-40 absolute top-0 left-[75%] bg-[#FFA63D] z-30 rounded-full flex justify-center items-center -translate-x-1/2 -translate-y-1/2"
+            >
+              <!-- play icon begin -->
+              <svg
+                class="button__play-icon"
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12L2.43406e-07 24L-7.15256e-07 -8.74228e-07L20 12Z"
+                  fill="white"
+                ></path>
+              </svg>
+              <!-- play icon end -->
+
+              <!-- pause icon begin -->
+              <svg
+                class="button__pause-icon hidden"
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 24V0H7.36842V24H0Z" fill="white"></path>
+                <path d="M12.6316 24V0H20V24H12.6316Z" fill="white"></path>
+              </svg>
+              <!-- paues icon end -->
+            </button>
+            <!-- button end -->
+
+            <!-- video Thumbnail begin -->
+            <img
+              id="videoTumbnail"
+              src="./images/Showreel-2022-preview-1.jpg"
+              alt="videoTumbnail"
+              class="absolute z-10 h-full w-full top-0 left-0 object-cover"
+            />
+            <!-- video Thumbnail end -->
+             <div class="absolute h-full w-full z-40 left-0 top-0" id="videoCursorPlayground"></div>
+            <video loop src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4" class="w-full h-full object-cover invisible"></video>
+          </div>
+          <!-- video right part end -->
+        </div>
+        <!-- video container end -->
+      </section>
+      <!-- video page end -->
+
+      <!-- projects section begin -->
+      <section data-scroll-section id="obysProjects" class="min-h-screen w-full">
+        <!-- page titleContainer begin-->
+        <div data-scroll class="titleContainer flex items-start gap-23 pl-20 pr-20 pt-32">
+          <!-- serial no box begin -->
+          <div class="serialNoBox flex justify-end w-3/12 h-full pb-10">
+            <h3
+              class="serialNumber font-[silkRegularItalic] text-[3.5rem] w-fit self-end"
+            >
+              02
+            </h3>
+          </div>
+          <!-- serial no box end -->
+
+          <!-- page title begin -->
+          <div class="title w-full h-fit">
+            <div class="overflow-hidden">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.1rem] textUpFromDown"
+              >
+                our projects
+              </h1>
+            </div>
+            <div class="thinLine w-full h-[1px] bg-[#ffffffab] mt-22"></div>
+          </div>
+          <!-- page title end -->
+        </div>
+        <!-- page titleContainer end -->
+
+        <!-- projectsContainer begin -->
+        <div
+         data-scroll
+          id="obysProjectsContainer"
+          class="p-20 mt-10"
+        >
+          <!-- project 1 begin-->
+          <div data-scroll class="obysProject">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="olga prudka" class="uppercase font-[plainLightRegular] text-[2.5rem] leading-none textUpFromDown">
+                olga prudka
+              </h2>
+            </div>
+
+            <figure class="w-full h-120 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/Olga_Prudka_1.png"
+                class="w-full h-full object-cover"
+                alt="project1"
+              />
+              <img
+                src="./images/Olga_Prudka_2.png"
+                class="w-full h-full object-cover"
+                alt="project1"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+              <div>
+               <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Logo design, Website design,
+                </p>
+               </div>
+               <div class="overflow-hidden">
+                 <p class="font-[plainLight] textUpFromDown">
+                   Development
+                 </p>
+               </div>
+              </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] textUpFromDown">2023</p>
+             </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 1 end -->
+
+          <!-- project 2 begin-->
+          <div data-scroll class="obysProject">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="aim" class="textUpFromDown uppercase font-[plainLightRegular] text-[2.5rem] leading-none">
+                aim
+              </h2>
+            </div>
+
+            <figure class="w-full h-172 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/AIM-1.png"
+                class="w-full h-full object-cover"
+                alt="project2"
+              />
+              <img
+                src="./images/AIM-2.png"
+                class="w-full h-full object-cover"
+                alt="project2"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+            <div>
+
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Logo design, Website design,
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Development
+                </p>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-[plainLight] textUpFromDown">2024</p>
+            </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 2 end -->
+
+          <!-- circle1 begin-->
+          <div data-scroll class="obysCircleContainer justify-self-end self-end">
+            <div
+              class="obysCircle w-95 h-95 rounded-full border border-solid border-white flex justify-center items-center relative"
+            >
+              <svg class="button__arrow h-[30%]" viewBox="0 0 91 118" fill="none">
+                <path
+                  d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <div class="whiteCircle flex justify-center items-center absolute z-10 bg-white w-full h-full left-0 top-0 rounded-full scale-0">
+                <p class="obsyCircleInfo font-[plainLightRegular] text-black w-[80%] scale-0 text-md">
+                  We are thrilled to have you on board. we hope you enjoy the projects ❤️
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- circle1 end -->
+
+          <!-- circle2 begin-->
+          <div data-scroll class="obysCircleContainer">
+            <div
+              class="obysCircle w-95 h-95 rounded-full border border-solid border-white flex justify-center items-center relative"
+            >
+              <svg class="button__arrow h-[30%] -rotate-45" viewBox="0 0 91 118" fill="none">
+                <path
+                  d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <div class="whiteCircle flex justify-center items-center absolute z-10 bg-white w-full h-full left-0 top-0 rounded-full scale-0">
+                <p class="obsyCircleInfo font-[plainLightRegular] text-black scale-0 text-md">
+                  It will make you WOW! 😉
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- circle2 end -->
+
+
+           <!-- project 3 begin-->
+           <div data-scroll class="obysProject mt-30">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="ochi" class="textUpFromDown uppercase font-[plainLightRegular] text-[2.5rem] leading-none">
+                ochi
+              </h2>
+            </div>
+
+            <figure class="w-full h-172 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/OCHI.png"
+                class="w-full h-full object-cover"
+                alt="project3"
+              />
+              <img
+                src="./images/OCHI_2-1.png"
+                class="w-full h-full object-cover"
+                alt="project3"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Website design, Development
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">2022</p>
+              </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 3 end -->
+
+           <!-- project 4 begin-->
+           <div data-scroll class="obysProject">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="David Laxer" class="textUpFromDown davidLaxer capitalize font-[plainLightRegular] text-[2.5rem] leading-none">
+                David laxer
+              </h2>
+            </div>
+
+            <figure class="w-full h-172 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/Laxer_1-2.png"
+                class="w-full h-full object-cover"
+                alt="project4"
+              />
+              <img
+                src="./images/Laxer_2.png"
+                class="w-full h-full object-cover"
+                alt="project4"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Website design, Development
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">2023</p>
+              </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 4 end -->
+
+           <!-- project 5 begin-->
+           <div data-scroll class="obysProject relative -top-50">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="Éminente" class="eminente textUpFromDown capitalize font-[plainLightRegular] text-[2.5rem] leading-none">
+                Éminente
+              </h2>
+            </div>
+
+            <figure class="w-full h-120 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/Éminente_First.png"
+                class="w-full h-full object-cover"
+                alt="project5"
+              />
+              <img
+                src="./images/Éminente_Second.png"
+                class="w-full h-full object-cover"
+                alt="project5"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+              <div>
+               <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Logo design, Website design,
+                </p>
+               </div>
+               <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Development
+                </p>
+               </div>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">2023</p>
+              </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 5 end -->
+
+             <!-- circle3 begin-->
+             <div data-scroll class="obysCircleContainer justify-self-end self-end pb-2">
+              <div
+                class="obysCircle w-95 h-95 rounded-full border border-solid border-white flex justify-center items-center relative"
+              >
+                <svg class="button__arrow h-[30%] -rotate-90" viewBox="0 0 91 118" fill="none">
+                  <path
+                    d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+
+                <div class="whiteCircle flex justify-center items-center absolute z-10 bg-white w-full h-full left-0 top-0 rounded-full scale-0">
+                  <p class="obsyCircleInfo font-[plainLightRegular] text-black scale-0 text-md">
+                   We like its color palette 🎨
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- circle3 end -->
+
+
+              <!-- project 6 begin-->
+           <div data-scroll class="obysProject mt-20">
+            <div class="projectName overflow-hidden w-fit">
+              <h2 data-title="makhno" class="textUpFromDown uppercase font-[plainLightRegular] text-[2.5rem] leading-none">
+               makhno
+              </h2>
+            </div>
+
+            <figure class="w-full h-172 mt-9 mb-9 overflow-hidden">
+              <img
+                src="./images/Makhno_First.png"
+                class="w-full h-full object-cover"
+                alt="project6"
+              />
+              <img
+                src="./images/Makhno_Hover.png"
+                class="w-full h-full object-cover"
+                alt="project6"
+              />
+            </figure>
+
+            <div
+              class="projectShortDescription flex justify-between items-start"
+            >
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">
+                  Website design, Development
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] textUpFromDown">2023</p>
+              </div>
+            </div>
+            <div class="thinLine w-full h-[.1rem] bg-white mt-8"></div>
+          </div>
+          <!-- project 6 end -->
+
+        </div>
+        <!-- projectsContainer end -->
+
+        <div data-scroll class="allProjects w-full flex justify-center items-center mt-20 mb-20">
+         <a href="" class="allProjectsButton rounded-full">
+          <button class="capitalize text-lg font-[plainLightRegular] rounded-full h-95 w-95 text-white bg-[#FFA63D]">all Projects <span class="font-[silkLightItalic] text-lg">(18)</span></button>
+         </a>
+        </div>
+      </section>
+      <!-- projects section end -->
+
+      <!-- about obys begin -->
+      <section data-scroll-section id="aboutObys" class="min-h-screen w-full">
+        <!-- page contentContainer begin-->
+        <div data-scroll class="contentContainer flex items-start gap-23 pl-20 pr-20 pt-32">
+          <!-- serial no box begin -->
+          <div data-scroll class="serialNoBox flex justify-end w-3/12 h-full pb-10">
+            <h3
+              class="serialNumber font-[silkRegularItalic] text-[3.5rem] w-fit self-end"
+            >
+              03
+            </h3>
+          </div>
+          <!-- serial no box end -->
+
+          <!-- page mainContent begin -->
+          <div data-scroll class="mainContent w-full h-fit">
+            <!-- title begin -->
+            <div class="overflow-hidden">
+              <h1
+                class="uppercase text-9xl font-normal font-[plainLightRegular] -tracking-[.1rem] textUpFromDown"
+              >
+                About obys
+              </h1>
+            </div>
+            <div class="thinLine w-full h-[1px] bg-[#ffffffab] mt-22"></div>
+            <!-- title end -->
+
+            <!-- obys description begin -->
+            <div data-scroll class="obysDescription mt-12">
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                  Our agency is about people
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                  Who love creating, designing
+                </p>
+              </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                and developing wow
+              </p>
+             </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                projects. In the same time we
+              </p>
+             </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                are a boutique agency that is
+              </p>
+             </div>
+              <div class="overflow-hidden">
+                <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                  more than the collective. We
+                </p>
+              </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                learn and grow, win and
+              </p>
+             </div>
+             <div class="overflow-hidden">
+              <p class="font-[plainLight] text-4xl w-fit textUpFromDown">
+                celebrate together.
+              </p>
+             </div>
+            </div>
+            <!-- obys description end -->
+
+            <!-- about team begin -->
+            <div data-scroll class="aboutTeam mt-15 flex gap-10 relative">
+              <figure class="w-2/4 overflow-hidden">
+                <img
+                  class="scale-106"
+                  src="./images/content-image01.jpg"
+                  alt="teamImage"
+                />
+              </figure>
+              <!-- team description begin -->
+              <div data-scroll class="teamDescription">
+                <p class="text-lg w-fit">We are happy to present our new</p>
+                <p class="text-lg w-fit">website and updated version of Obys</p>
+                <p class="text-lg w-fit">website and updated version of Obys</p>
+                <p class="text-lg w-fit mb-6">new projects worldwide!</p>
+                <p class="text-lg w-fit">
+                  Would you like to have award winning
+                </p>
+                <p class="text-lg w-fit">
+                  site or unique branding style, please
+                </p>
+                <p class="text-lg w-fit">say hi to our manager —</p>
+                <p class="text-lg w-fit">info@obys.agency.</p>
+                <p class="text-lg w-fit">And we will help you with the</p>
+                <p class="text-lg w-fit">pleasure.</p>
+              </div>
+              <!-- team description end -->
+
+              <!-- aboutAwards begin -->
+              <div
+              data-scroll class="aboutAwards absolute z-50 w-[50%] bg-[#3F7DF4] top-[70%] left-[35%] p-13"
+              >
+                <!-- award 1 -->
+                <div class="award mt-5">
+                  <h3 class="text-[1.6rem] font-[plainLightRegular]">
+                    Awwwards x16
+                  </h3>
+                  <p class="text-md font-[plainLight] leading-none">
+                    SOTM, SOTD and Honrable Mentions
+                  </p>
+                </div>
+                <!-- thin line -->
+                <div
+                  class="awardThinLine w-full h-[1px] bg-[#ffffffab] mt-8 mb-8"
+                ></div>
+                <!-- award 2 -->
+                <div class="award">
+                  <h3 class="text-[1.6rem] font-[plainLightRegular]">
+                    Red Dot Award x1
+                  </h3>
+                  <p class="text-md font-[plainLight] leading-none">
+                    Best of the Best
+                  </p>
+                </div>
+                <!-- thin line -->
+                <div
+                  class="awardThinLine w-full h-[1px] bg-[#ffffffab] mt-8 mb-8"
+                ></div>
+                <!-- award 3 -->
+                <div class="award">
+                  <h3 class="text-[1.6rem] font-[plainLightRegular]">
+                    FWA x11
+                  </h3>
+                  <p class="text-md font-[plainLight] leading-none">
+                    FWA of The Day
+                  </p>
+                </div>
+                <!-- thin line -->
+                <div
+                  class="awardThinLine w-full h-[1px] bg-[#ffffffab] mt-8 mb-8"
+                ></div>
+                <!-- award 4 -->
+                <div class="award">
+                  <h3 class="text-[1.6rem] font-[plainLightRegular]">
+                    CSSDA x23
+                  </h3>
+                  <p class="text-md font-[plainLight] leading-none">
+                    WOTM, WOTD and UI, UX, Innovation
+                  </p>
+                </div>
+                <!-- thin line -->
+                <div
+                  class="awardThinLine w-full h-[1px] bg-[#ffffffab] mt-8 mb-8"
+                ></div>
+                <!-- award 5 -->
+                <div class="award">
+                  <h3 class="text-[1.6rem] font-[plainLightRegular]">
+                    Behance x25
+                  </h3>
+                  <p class="text-md font-[plainLight] leading-none">
+                    Interaction, Graphic Design
+                  </p>
+                </div>
+                <!-- thin line  begin-->
+                <div
+                  class="awardThinLine w-full h-[1px] bg-[#ffffffab] mt-8 mb-5"
+                ></div>
+                <!-- thin line end -->
+              </div>
+              <!-- aboutAward end -->
+            </div>
+            <!-- about team end -->
+
+            <!--empty space begin-->
+            <div data-scroll class="emptySpace h-130"></div>
+            <!-- empty space end -->
+            <div
+            data-scroll  class="thinLine w-full h-[1px] bg-[#ffffffab] mt-20 mb-7"
+            ></div>
+            <p data-scroll class="font-[plainLight] text-white text-lg">We work with</p>
+          </div>
+          <!-- page mainContent end -->
+        </div>
+        <!-- page contentContainer end -->
+      </section>
+      <!-- about obys end -->
+
+      <!-- marquee section begin -->
+      <section data-scroll-section id="marquee" class="mt-20">
+        <!-- marquee one begin -->
+        <div
+          data-scroll
+          id="one"
+          class="marqueeContainer flex overflow-x-scroll overflow-y-hidden gap-0 mt-5"
+        >
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            fashion — <span class="font-[silkLightItalic]">sport</span> —
+            technology — <span class="font-[silkLightItalic]">fashion</span> —
+            sport — technology —&ThinSpace;
+          </h1>
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            fashion — <span class="font-[silkLightItalic]">sport</span> —
+            technology — <span class="font-[silkLightItalic]">fashion</span> —
+            sport — technology —&ThinSpace;
+          </h1>
+        </div>
+        <!-- marquee one end -->
+
+        <!-- marquee two begin -->
+        <div
+          data-scroll
+          id="two"
+          class="marqueeContainer flex overflow-x-scroll overflow-y-hidden gap-0 mt-5"
+        >
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            architecture — <span class="font-[silkLightItalic]">beauty</span> —
+            real estate —
+            <span class="font-[silkLightItalic]">architecture</span> — beauty —
+            real estate —&ThinSpace;
+          </h1>
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            architecture — <span class="font-[silkLightItalic]">beauty</span> —
+            real estate —
+            <span class="font-[silkLightItalic]">architecture</span> — beauty —
+            real estate —&ThinSpace;
+          </h1>
+        </div>
+        <!-- marquee two end -->
+
+        <!-- marquee three begin -->
+        <div
+          data-scroll
+          id="three"
+          class="marqueeContainer flex overflow-x-scroll overflow-y-hidden gap-0 mt-5"
+        >
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            travel — <span class="font-[silkLightItalic]">science</span> —
+            partners — <span class="font-[silkLightItalic]">travel</span> —
+            science — partners —&ThinSpace;
+          </h1>
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            travel — <span class="font-[silkLightItalic]">science</span> —
+            partners — <span class="font-[silkLightItalic]">travel</span> —
+            science — partners —&ThinSpace;
+          </h1>
+        </div>
+        <!-- marquee three end -->
+
+        <!-- marquee four begin -->
+        <div
+          data-scroll
+          id="four"
+          class="marqueeContainer flex overflow-x-scroll overflow-y-hidden gap-0 mt-5"
+        >
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            hotels — <span class="font-[silkLightItalic]">Music</span> —
+            Automotive — <span class="font-[silkLightItalic]">hotels</span> —
+            Music — Automotive —&ThinSpace;
+          </h1>
+          <h1 class="font-[plainLight] uppercase text-9xl shrink-0">
+            hotels — <span class="font-[silkLightItalic]">Music</span> —
+            Automotive — <span class="font-[silkLightItalic]">hotels</span> —
+            Music — Automotive —&ThinSpace;
+          </h1>
+        </div>
+        <!-- marquee tfourend -->
+      </section>
+      <!-- marquee section end -->
+
+      <!-- footer section begin -->
+      <footer data-scroll-section id="footerSection" class="min-h-screen w-full mt-20">
+        <!-- page contentContainer begin-->
+        <div data-scroll class="contentContainer flex items-start gap-23 pl-20 pr-20 pt-32">
+          <!-- serial no box begin -->
+          <div  data-scroll class="serialNoBox flex justify-end w-3/12 h-full pb-10">
+            <h3
+              class="serialNumber font-[silkRegularItalic] text-[3.5rem] w-fit self-end"
+            >
+              04
+            </h3>
+          </div>
+          <!-- serial no box end -->
+
+          <!-- page mainContent begin -->
+          <div data-scroll class="mainContent w-full h-fit">
+            <!-- title begin -->
+            <div data-scroll class="flex items-center w-full" id="letsCreate">
+              <h1
+                class="uppercase text-9xl font-normal -tracking-[.1rem] relative flex flex-nowrap justify-center items-center"
+              ></h1>
+              <svg
+                class="entry-title__arrow w-[6.4rem] h-[6.4rem] ml-[2.5rem]"
+                viewBox="0 0 118 91"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M57.295 75.1963L56.5879 74.4892L55.8808 75.1963L56.5879 75.9034L57.295 75.1963ZM77.0457 55.4457L77.7528 56.1528L79.4599 54.4457L77.0457 54.4457L77.0457 55.4457ZM72.3742 90.2755L71.6671 90.9826L72.3742 91.6897L73.0813 90.9826L72.3742 90.2755ZM117.513 45.1371L118.22 45.8442L118.927 45.1371L118.22 44.4299L117.513 45.1371ZM102.433 30.0578L103.141 29.3507L102.433 28.6431L101.726 29.3512L102.433 30.0578ZM102.433 30.0585L101.726 30.7656L102.433 31.4732L103.14 30.7651L102.433 30.0585ZM72.3743 9.86531e-07L73.0814 -0.707106L72.3743 -1.41421L71.6672 -0.707106L72.3743 9.86531e-07ZM57.2951 15.0792L56.588 14.3721L55.8809 15.0792L56.588 15.7863L57.2951 15.0792ZM76.3363 34.1205L76.3363 35.1205L78.7506 35.1205L77.0434 33.4134L76.3363 34.1205ZM-4.50306e-05 34.1205L-4.50525e-05 33.1205L-1.00005 33.1205L-1.00005 34.1205L-4.50306e-05 34.1205ZM-4.45646e-05 55.4457L-1.00004 55.4457L-1.00004 56.4457L-4.45427e-05 56.4457L-4.45646e-05 55.4457ZM58.0021 75.9034L77.7528 56.1528L76.3385 54.7386L56.5879 74.4892L58.0021 75.9034ZM73.0813 89.5684L58.0021 74.4892L56.5879 75.9034L71.6671 90.9826L73.0813 89.5684ZM116.806 44.4299L71.6671 89.5684L73.0813 90.9826L118.22 45.8442L116.806 44.4299ZM101.726 30.765L116.806 45.8442L118.22 44.4299L103.141 29.3507L101.726 30.765ZM103.14 30.7651L103.141 30.7645L101.726 29.3512L101.725 29.3519L103.14 30.7651ZM103.14 29.3514L73.0814 -0.707106L71.6672 0.707108L101.726 30.7656L103.14 29.3514ZM71.6672 -0.707106L56.588 14.3721L58.0022 15.7863L73.0814 0.707108L71.6672 -0.707106ZM56.588 15.7863L75.6292 34.8276L77.0434 33.4134L58.0022 14.3721L56.588 15.7863ZM76.3363 33.1205L-4.50525e-05 33.1205L-4.50088e-05 35.1205L76.3363 35.1205L76.3363 33.1205ZM-1.00005 34.1205L-1.00004 55.4457L0.999955 55.4457L0.999955 34.1205L-1.00005 34.1205ZM-4.45427e-05 56.4457L77.0457 56.4457L77.0457 54.4457L-4.45864e-05 54.4457L-4.45427e-05 56.4457Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <div class="thinLine w-full h-[1px] bg-[#ffffffab] mt-22"></div>
+            <!-- title end -->
+
+            <!-- Contact info begin -->
+            <div data-scroll id="contactInfo" class="flex justify-start items-start gap-30">
+              <!-- social links container begin -->
+              <div class="socialLinksContainer mt-25 w-[80%]">
+                <h4 class="font-[plainLight] text-md mb-7">Socials</h4>
+                <!-- links begin -->
+                <div data-scroll class="socialLinks leading-8">
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Dribbble" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Dribbble</a>
+                  </div>
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Behance" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Behance</a
+                    >
+                  </div>
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Instagram" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Instagram</a
+                    >
+                  </div>
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Facebook" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Facebook</a
+                    >
+                  </div>
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Twitter" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Twitter</a
+                    >
+                  </div>
+                  <div class="socialLinkName overflow-hidden w-fit">
+                    <a href="" data-title="Youtube" class="block font-[plainLight] text-[1.7rem] w-fit"
+                      >Youtube</a
+                    >
+                  </div>
+                </div>
+                <!-- links end -->
+              </div>
+              <!-- social links container end -->
+
+              <!-- address container begin -->
+              <div data-scroll class="addressContainer mt-25 w-[80%]">
+                <h4 class="font-[plainLight] text-md mb-7">Address</h4>
+                <!-- address begin -->
+                <div class="address leading-none">
+                  <p class="font-[plainLight] text-[1.7rem]">
+                    Orignally from Kharkiv, working globally
+                  </p>
+                </div>
+                <!-- address end -->
+              </div>
+              <!-- address container end -->
+
+              <!-- info container begin -->
+              <div data-scroll class="infoContainer mt-25 w-[100%]">
+                <h4 class="font-[plainLight] text-md mb-7">Say Hi!</h4>
+                <!-- info begin -->
+                <div class="info leading-none overflow-hidden w-fit">
+                  <p data-title="info@obys.agency" class="h-[1.8rem] font-[plainLight] text-[1.7rem] underline w-fit leading-none">
+                    info@obys.agency
+                  </p>
+                </div>
+                <!-- info end -->
+              </div>
+              <!-- info container end -->
+            </div>
+            <!-- Contact info end -->
+
+            <!-- thin line begin -->
+            <div data-scroll class="thinLine w-full h-[1px] bg-white mt-30 mb-8"></div>
+            <!-- thin line end -->
+            <p data-scroll class="font-[plainLightRegular] mb-8">Obys Agency &copy; 2025</p>
+          </div>
+          <!-- page mainContent end -->
+        </div>
+        <!-- page contentContainer end -->
+      </footer>
+      <!-- footer section end -->
+    </main>
+
+    <!-- locomotive js -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- gsap main js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- scroll trigger gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Three JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- Shery js -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+
+    <!-- main js -->
+    <script src="script.js"></script>
+  </body>
+</html>
