@@ -15,6 +15,3 @@
 
 ### 04 Text Color
 - Live Link - [TextColor](https://text-color-delta.vercel.app/)
-
-### 05 Obys Agency
-- Live Link - [ObysAgency](https://obys-agency-zeta.vercel.app/)
